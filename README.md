@@ -16,7 +16,7 @@ Vytvoríme adresár **scaledevicemodel** a skopírujeme potrebné súbory.
 
 ```
 mkdir scaledevicemodel
-cp .\UA-ModelCompiler\Published\DI\OpcUaDiModel.xml .\scaledevicemodel\
+cp .\UA-ModelCompiler\Published\ADI\OpcUaAdiModel.xml .\scaledevicemodel\
 ```
 
 
