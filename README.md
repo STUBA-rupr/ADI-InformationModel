@@ -5,11 +5,11 @@ Tento projekt je venovaný:
 Predpokladá sa prostredie Windows 7 a vyššie.
 ## Vytvorenie vlastného informačného modelu založeného na ADI
 Ako prvé je potrebné stiahnuť si dáta z úložiska git (git). 
-Vytvoríme nový adresár c:\informationmodel a vytvoríme klon projektu git [UA ModelCompiler](https://github.com/OPCFoundation/UA-ModelCompiler) cez prostredie _powershell_:
+Vytvoríme nový adresár c:\informationmodel a vytvoríme klon projektu git [UA ModelCompiler](https://github.com/STUBA-rupr/UA-ModelCompiler) cez prostredie _powershell_:
 ```
 PS C:\> mkdir informationmodel
 PS C:\> cd .\informationmodel\
-PS C:\informationmodel> git clone https://github.com/OPCFoundation/UA-ModelCompiler --recursive
+PS C:\informationmodel> git clone https://github.com/STUBA-rupr/UA-ModelCompiler --recursive
 ```
 Projekt riešenie UA-ModelCompiler odporúčam skompilovať v MS Visual Studiu 2017 Community.
 Vytvoríme adresár **scaledevicemodel** a skopírujeme potrebné súbory.
