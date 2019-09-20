@@ -22,3 +22,4 @@ cp .\UA-ModelCompiler\Published\ADI\OpcUaAdiModel.xml .\scaledevicemodel\
 
 ## Preskúmanie informačného modelu _OPC UA Analyser Devices (ADI)_
 Program na vytváranie OPC UA _informačného modelu_ UA Modeler je možné stiahnuť na stránke: [Unified-Automation](https://www.unified-automation.com/products/development-tools/uamodeler.html).
+Po spustení programu _UA Modeler_ je treba otvoriť projekt **weightscalenodeset.tt2pro**. Uzly obsahúce objektové typy ADI informačného modelu sú v adresáry 
