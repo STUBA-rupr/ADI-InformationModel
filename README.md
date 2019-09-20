@@ -1,6 +1,6 @@
 # ADI-InformationModel
 Tento projekt je venovaný:
-- vytvoreniu vlastného informačného modelu založeného na _OPC Unified Architecture for Analyser Devices (ADI)_.
+- vytvoreniu vlastného _informačného modelu_(IM) založeného na _OPC Unified Architecture for Analyser Devices (ADI)_.
 - preskúmaniu informačného modelu ADI.
 Predpokladá sa prostredie Windows 7 a vyššie.
 ## Vytvorenie vlastného informačného modelu založeného na ADI
@@ -22,4 +22,4 @@ cp .\UA-ModelCompiler\Published\ADI\OpcUaAdiModel.xml .\scaledevicemodel\
 
 ## Preskúmanie informačného modelu _OPC UA Analyser Devices (ADI)_
 Program na vytváranie OPC UA _informačného modelu_ UA Modeler je možné stiahnuť na stránke: [Unified-Automation](https://www.unified-automation.com/products/development-tools/uamodeler.html).
-Po spustení programu _UA Modeler_ je treba otvoriť projekt **weightscalenodeset.tt2pro**. Uzly obsahúce objektové typy ADI informačného modelu sú v adresáry 
+Po spustení programu _UA Modeler_ je treba otvoriť projekt **weightscalenodeset.tt2pro**. Uzly obsahúce objektové typy ADI informačného modelu sú v adresáry Types>ObjectTypes>TopologyElementType. Všetky uzly ADI IM sú popísané v špecifikácii [OPC Unified Architecture for Analyzer Devices (ADI)](https://opcfoundation.org/developer-tools/specifications-opc-ua-information-models/opc-unified-architecture-for-analyzer-devices-adi/).
