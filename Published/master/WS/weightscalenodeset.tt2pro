@@ -1,0 +1,30 @@
+###########################
+# UaModeler Project File  #
+# Generated at 20.09.2019 #
+###########################
+
+PROJECTNAME = WeightScaleNodeSet
+
+TEMPLATESET = ($TEMPLATES)/modeling/v1_0/t0/modeling.tt2set
+
+MODELS += ($MODELS)/Opc.Ua.NodeSet2.ua \
+    ../../../../../Program Files (x86)/UnifiedAutomation/UaModeler/bin/models/Opc.Ua.Di.NodeSet2.ua \
+    ../../../../UA-ModelCompiler/Published/ADI/Opc.Ua.Adi.NodeSet2.ua
+
+COLORS = ($MODELS)/Opc.Ua.NodeSet2.ua: #0000ff\
+    ../../../../../Program Files (x86)/UnifiedAutomation/UaModeler/bin/models/Opc.Ua.Di.NodeSet2.ua: #0000ff\
+    ../../../../UA-ModelCompiler/Published/ADI/Opc.Ua.Adi.NodeSet2.ua: #0000ff
+
+OUTPUTPATH = ../../../../../VSStudium/InformationModels/NucleoInformationModel
+
+GENERATE += ../../../../../Program Files (x86)/UnifiedAutomation/UaModeler/bin/models/Opc.Ua.Di.NodeSet2.ua \
+    ../../../../UA-ModelCompiler/Published/ADI/Opc.Ua.Adi.NodeSet2.ua
+
+LOCKEDMODELS += ../../../../../Program Files (x86)/UnifiedAutomation/UaModeler/bin/models/Opc.Ua.Di.NodeSet2.ua
+
+NODEACCESSINFOROLES += Administrator \
+    SecurityAdmin \
+    ConfigurationAdmin \
+    Operator \
+    Observer
+

@@ -1,0 +1,13 @@
+<opc:TypeDictionary
+  xmlns:ADI="http://opcfoundation.org/UA/ADI/"
+  xmlns:opc="http://opcfoundation.org/BinarySchema/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:ua="http://opcfoundation.org/UA/"
+  xmlns:tns="http://opcfoundation.org/FEISTU/WS/"
+  DefaultByteOrder="LittleEndian"
+  TargetNamespace="http://opcfoundation.org/FEISTU/WS/"
+>
+  <opc:Import Namespace="http://opcfoundation.org/UA/ADI/" Location="Opc.Ua.Adi.BinarySchema.bsd"/>
+  <opc:Import Namespace="http://opcfoundation.org/UA/" Location="Opc.Ua.BinarySchema.bsd"/>
+
+</opc:TypeDictionary>

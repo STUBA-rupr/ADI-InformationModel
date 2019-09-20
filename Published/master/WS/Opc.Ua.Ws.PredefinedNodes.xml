@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<uax:ListOfNodeState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd">
+  <uax:NamespaceUris>
+    <uax:NamespaceUri>http://opcfoundation.org/FEISTU/WS/</uax:NamespaceUri>
+    <uax:NamespaceUri>http://opcfoundation.org/UA/ADI/</uax:NamespaceUri>
+  </uax:NamespaceUris>
+  <ScaleDeviceType xmlns="http://opcfoundation.org/FEISTU/WS/">
+    <uax:NodeClass>ObjectType_8</uax:NodeClass>
+    <uax:NodeId>
+      <uax:Identifier>ns=1;i=15001</uax:Identifier>
+    </uax:NodeId>
+    <uax:BrowseName>
+      <uax:NamespaceIndex>1</uax:NamespaceIndex>
+      <uax:Name>ScaleDeviceType</uax:Name>
+    </uax:BrowseName>
+    <uax:SuperTypeId>
+      <uax:Identifier>ns=2;i=1001</uax:Identifier>
+    </uax:SuperTypeId>
+    <uax:IsAbstract>true</uax:IsAbstract>
+  </ScaleDeviceType>
+</uax:ListOfNodeState>
