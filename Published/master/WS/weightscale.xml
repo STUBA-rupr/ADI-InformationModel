@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UANodeSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd" xmlns:s1="http://yourorganisation.org/weightscale/Types.xsd" xmlns:s2="http://opcfoundation.org/UA/DI/Types.xsd" xmlns:ua="http://unifiedautomation.com/Configuration/NodeSet.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <NamespaceUris>
+        <Uri>http://yourorganisation.org/weightscale/</Uri>
+        <Uri>http://opcfoundation.org/UA/DI/</Uri>
+    </NamespaceUris>
+    <Aliases>
+        <Alias Alias="Double">i=11</Alias>
+        <Alias Alias="HasModellingRule">i=37</Alias>
+        <Alias Alias="HasTypeDefinition">i=40</Alias>
+        <Alias Alias="HasSubtype">i=45</Alias>
+        <Alias Alias="HasProperty">i=46</Alias>
+        <Alias Alias="HasComponent">i=47</Alias>
+        <Alias Alias="Range">i=884</Alias>
+    </Aliases>
+    <Extensions>
+        <Extension>
+            <ua:ModelInfo Tool="UaModeler" Hash="D9orxhFERHZ2D6RoljmyNw==" Version="1.6.2"/>
+        </Extension>
+    </Extensions>
+    <UAObjectType NodeId="ns=1;i=1002" BrowseName="1:WeightScaleType">
+        <DisplayName>WeightScaleType</DisplayName>
+        <References>
+            <Reference ReferenceType="HasComponent">ns=1;i=5001</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=5002</Reference>
+            <Reference ReferenceType="HasSubtype" IsForward="false">ns=2;i=1002</Reference>
+        </References>
+    </UAObjectType>
+    <UAObject ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=5001" BrowseName="2:MethodSet">
+        <DisplayName>MethodSet</DisplayName>
+        <Description>Flat list of Methods</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=58</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1002</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=7001</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=7002</Reference>
+        </References>
+    </UAObject>
+    <UAMethod ParentNodeId="ns=1;i=5001" NodeId="ns=1;i=7001" BrowseName="1:Tare">
+        <DisplayName>Tare</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5001</Reference>
+        </References>
+    </UAMethod>
+    <UAMethod ParentNodeId="ns=1;i=5001" NodeId="ns=1;i=7002" BrowseName="1:Zero">
+        <DisplayName>Zero</DisplayName>
+        <References>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5001</Reference>
+        </References>
+    </UAMethod>
+    <UAObject ParentNodeId="ns=1;i=1002" NodeId="ns=1;i=5002" BrowseName="2:ParameterSet">
+        <DisplayName>ParameterSet</DisplayName>
+        <Description>Flat list of Parameters</Description>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=58</Reference>
+            <Reference ReferenceType="HasModellingRule">i=80</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=1002</Reference>
+            <Reference ReferenceType="HasComponent">ns=1;i=6001</Reference>
+        </References>
+    </UAObject>
+    <UAVariable DataType="Double" ParentNodeId="ns=1;i=5002" NodeId="ns=1;i=6001" BrowseName="1:weightScale" AccessLevel="3">
+        <DisplayName>weightScale</DisplayName>
+        <References>
+            <Reference ReferenceType="HasTypeDefinition">i=2368</Reference>
+            <Reference ReferenceType="HasProperty">ns=1;i=6002</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasComponent" IsForward="false">ns=1;i=5002</Reference>
+        </References>
+    </UAVariable>
+    <UAVariable DataType="Range" ParentNodeId="ns=1;i=6001" NodeId="ns=1;i=6002" BrowseName="EURange">
+        <DisplayName>EURange</DisplayName>
+        <References>
+            <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=6001</Reference>
+            <Reference ReferenceType="HasModellingRule">i=78</Reference>
+            <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
+        </References>
+    </UAVariable>
+</UANodeSet>
