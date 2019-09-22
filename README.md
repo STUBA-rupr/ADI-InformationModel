@@ -23,7 +23,7 @@ cp .\UA-ModelCompiler\Published\ADI\OpcUaAdiModel.xml .\scaledevicemodel\
 
 ## Vytvorenie vlastného informačného modelu založeného na DI
 Návrh informačného modelu váhy založeného na špecifikácii DI: 
-![weightScaleIM](weightScaleIM.png)
+![Screenshot](weightScaleIM.png)
 
 
 ## Preskúmanie informačného modelu _Device Information Model _
