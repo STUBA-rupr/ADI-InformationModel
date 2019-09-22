@@ -25,6 +25,8 @@ cp .\UA-ModelCompiler\Published\ADI\OpcUaAdiModel.xml .\scaledevicemodel\
 Návrh informačného modelu váhy založeného na špecifikácii DI: 
 ![Screenshot](weightScaleIM.png)
 
+Kód ktorý popisuje daný model by mohol vyzerať nasledovne: [modeldesignscale.xml](Published\master\WS\modeldesignscale.xml) .
+
 
 ## Preskúmanie informačného modelu _Device Information Model _
 Program na vytváranie OPC UA _informačného modelu_ UA Modeler je možné stiahnuť na stránke: [Unified-Automation](https://www.unified-automation.com/products/development-tools/uamodeler.html).
