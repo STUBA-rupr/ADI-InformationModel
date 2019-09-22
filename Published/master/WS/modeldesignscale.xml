@@ -7,24 +7,56 @@
   xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:OpcUa="http://opcfoundation.org/UA/"
-  xmlns:ADI="http://opcfoundation.org/UA/ADI/"
-  xmlns:WS="http://opcfoundation.org/FEISTU/WS/"
+  xmlns:DI="http://opcfoundation.org/UA/DI/"
+  xmlns:WS="http://phi-ware.com/FEISTU/WS/"
   
   xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-  TargetNamespace="http://opcfoundation.org/FEISTU/WS/"
-  TargetXmlNamespace="http://opcfoundation.org/FEISTU/WS/"
+  TargetNamespace="http://phi-ware.com/FEISTU/WS/"
+  TargetXmlNamespace="http://phi-ware.com/FEISTU/WS/"
   TargetVersion="1.00"
   TargetPublicationDate="2019-09-19T00:00:00Z"
   xmlns="http://opcfoundation.org/UA/ModelDesign.xsd">
 
   <Namespaces>
-    <Namespace Name="OpcUaWs" Prefix="Opc.Ua.Ws" XmlNamespace="http://opcfoundation.org/FEISTU/WS/Types.xsd" XmlPrefix="WS">http://opcfoundation.org/FEISTU/WS/</Namespace>
-    <Namespace Name="OpcUaAdi" Prefix="Opc.Ua.Adi" XmlNamespace="http://opcfoundation.org/UA/ADI/Types.xsd" XmlPrefix="ADI" FilePath="OpcUaAdiModel.xml">http://opcfoundation.org/UA/ADI/</Namespace>
+    <Namespace Name="OpcUaWs" Prefix="Opc.Ua.Ws" XmlNamespace="http://phi-ware.com/FEISTU/WS/Types.xsd" XmlPrefix="WS">http://phi-ware.com/FEISTU/WS/</Namespace>
+    <Namespace Name="OpcUaDi" Prefix="Opc.Ua.Di" XmlNamespace="http://opcfoundation.org/UA/DI/Types.xsd" XmlPrefix="DI" FilePath="OpcUaDiModel">http://opcfoundation.org/UA/DI/</Namespace>
     <Namespace Name="OpcUa" Prefix="Opc.Ua" InternalPrefix="Opc.Ua.Server" XmlNamespace="http://opcfoundation.org/UA/2008/02/Types.xsd" XmlPrefix="OpcUa">http://opcfoundation.org/UA/</Namespace>
   </Namespaces>
 
-  <ObjectType SymbolicName="WS:ScaleDeviceType" BaseType="ADI:AnalyserDeviceType" IsAbstract="true" SupportsEvents="true">
-    
+  <ObjectType SymbolicName="WS:WeightScaleType" BaseType="DI:DeviceType" IsAbstract="false" SupportsEvents="true">
+    <Description>Base weight scale type.</Description>
+    <Children>
+      <!-- Parameter set-->
+      <Object SymbolicName="WS:ParameterSet" TypeDefinition="OpcUa:BaseObjectType" ModellingRule="Mandatory">
+        <Description>Flat list of Parameters</Description>
+        <Children>
+          <Variable SymbolicName="DI:weightScale" TypeDefinition="OpcUa:AnalogItemType" DataType="OpcUa:Double" ModellingRule="Mandatory">
+            <BrowseName>weightScale</BrowseName>
+            <Description>Actual weight.</Description>
+            <Children>
+              <Property SymbolicName="OpcUa:InstrumentRange" ModellingRule="Optional" DataType="OpcUa:Range" />
+              <Property SymbolicName="OpcUa:EURange" ModellingRule="Optional" DataType="OpcUa:Range" />
+              <Property SymbolicName="OpcUa:EngineeringUnits" ModellingRule="Optional" DataType="OpcUa:EUInformation" />
+            </Children>
+          </Variable>
+        </Children>
+      </Object>
+      <!-- Method set-->
+      <Object SymbolicName="WS:MethodSet" TypeDefinition="OpcUa:BaseObjectType" ModellingRule="Mandatory">
+        <Description>Flat list of Methods</Description>
+        <Children>
+          <Method SymbolicName="WS:Tare" ModellingRule="Mandatory">
+            <BrowseName>Tare</BrowseName>
+            <Description>Tare balnace.</Description>
+          </Method>
+          <Method SymbolicName="WS:Zero" ModellingRule="Mandatory">
+            <BrowseName>Zero</BrowseName>
+            <Description>Zero balnace.</Description>
+          </Method>
+        </Children>
+      </Object>
+      
+    </Children>
   </ObjectType>
   
   </ModelDesign>

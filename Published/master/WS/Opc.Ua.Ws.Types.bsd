@@ -1,13 +1,13 @@
 <opc:TypeDictionary
-  xmlns:ADI="http://opcfoundation.org/UA/ADI/"
+  xmlns:DI="http://opcfoundation.org/UA/DI/"
   xmlns:opc="http://opcfoundation.org/BinarySchema/"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:ua="http://opcfoundation.org/UA/"
-  xmlns:tns="http://opcfoundation.org/FEISTU/WS/"
+  xmlns:tns="http://phi-ware.com/FEISTU/WS/"
   DefaultByteOrder="LittleEndian"
-  TargetNamespace="http://opcfoundation.org/FEISTU/WS/"
+  TargetNamespace="http://phi-ware.com/FEISTU/WS/"
 >
-  <opc:Import Namespace="http://opcfoundation.org/UA/ADI/" Location="Opc.Ua.Adi.BinarySchema.bsd"/>
+  <opc:Import Namespace="http://opcfoundation.org/UA/DI/" Location="Opc.Ua.Di.BinarySchema.bsd"/>
   <opc:Import Namespace="http://opcfoundation.org/UA/" Location="Opc.Ua.BinarySchema.bsd"/>
 
 </opc:TypeDictionary>
