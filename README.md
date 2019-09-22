@@ -1,10 +1,12 @@
 # DI-InformationModel
 Tento projekt je venovaný:
-- vytvoreniu vlastného _informačného modelu_(IM) založeného na _Device Information Model_.
-- preskúmaniu informačného modelu DI.
+- vytvorenie lokálnej kópie projektu 
+- preskúmaniu informačného modelu  _informačného modelu_(IM) založeného na _Device Information Model(DI)_ .
+- vytvoreniu vlastného IM.
 Predpokladá sa prostredie Windows 7 a vyššie.
-## Vytvorenie vlastného informačného modelu založeného na ADI
-Ako prvé je potrebné stiahnuť si dáta z úložiska git (git). 
+
+## Vytvorenie lokálnej kópie projektu 
+Ako prvé je potrebné nainštalovať [git](https://www.develves.net/blogs/asd/articles/using-git-with-powershell-on-windows-10/) do počítača a stiahnuť si dáta z úložiska git. 
 Vytvoríme nový adresár c:\informationmodel a vytvoríme klon projektu git [UA ModelCompiler](https://github.com/STUBA-rupr/UA-ModelCompiler) cez prostredie _powershell_:
 ```
 PS C:\> mkdir informationmodel
@@ -18,6 +20,10 @@ Vytvoríme adresár **scaledevicemodel** a skopírujeme potrebné súbory.
 mkdir scaledevicemodel
 cp .\UA-ModelCompiler\Published\ADI\OpcUaAdiModel.xml .\scaledevicemodel\
 ```
+
+## Vytvorenie vlastného informačného modelu založeného na DI
+Návrh informačného modelu váhy založeného na špecifikácii DI: 
+![weightScaleIM](weightScaleIM.png)
 
 
 ## Preskúmanie informačného modelu _Device Information Model _
