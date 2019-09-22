@@ -26,8 +26,15 @@ Návrh informačného modelu váhy založeného na špecifikácii DI:
 ![Screenshot](weightScaleIM.png)
 
 Kód ktorý popisuje daný model by mohol vyzerať nasledovne: [modeldesignscale.xml](Published/master/WS/modeldesignscale.xml).
+Súbor skompilujeme príkazom:
+```
+.\PublishModel.bat
+```
 
-
-## Preskúmanie informačného modelu _Device Information Model _
+## Preskúmanie informačného modelu _Device Information Model_
 Program na vytváranie OPC UA _informačného modelu_ UA Modeler je možné stiahnuť na stránke: [Unified-Automation](https://www.unified-automation.com/products/development-tools/uamodeler.html).
-Po spustení programu _UA Modeler_ je treba otvoriť projekt **weightscalenodeset.tt2pro**. Uzly obsahúce objektové typy DI informačného modelu sú v adresáry Types>ObjectTypes>TopologyElementType. Všetky uzly DI IM sú popísané v špecifikácii [Part 100: Device Information Model](https://opcfoundation.org/developer-tools/specifications-unified-architecture/part-100-device-information-model/).
+Po spustení programu _UA Modeler_ je treba otvoriť projekt **weightscalenodeset.tt2pro**. Uzly obsahúce objektové typy DI informačného modelu sú v adresáry Types>ObjectTypes>TopologyElementType. Všetky uzly DI IM sú popísané v špecifikácii [Part 100: Device Information Model](https://opcfoundation.org/developer-tools/specifications-unified-architecture/part-100-device-information-model/). 
+
+Projekt obsahuje aj informačný model pre zariadenie váha:
+![Screenshot](UAModeler-weightScale.PNG)
+
