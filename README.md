@@ -25,7 +25,7 @@ cp .\UA-ModelCompiler\Published\ADI\OpcUaAdiModel.xml .\scaledevicemodel\
 Návrh informačného modelu váhy založeného na špecifikácii DI: 
 ![Screenshot](weightScaleIM.png)
 
-Kód ktorý popisuje daný model by mohol vyzerať nasledovne: [modeldesignscale.xml](Published\master\WS\modeldesignscale.xml) .
+Kód ktorý popisuje daný model by mohol vyzerať nasledovne: [modeldesignscale.xml](Published/master/WS/modeldesignscale.xml).
 
 
 ## Preskúmanie informačného modelu _Device Information Model _
