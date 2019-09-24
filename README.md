@@ -26,6 +26,7 @@ Návrh informačného modelu váhy založeného na špecifikácii DI:
 ![Screenshot](weightScaleIM.png)
 
 Kód ktorý popisuje daný model by mohol vyzerať nasledovne: [modeldesignscale.xml](Published/master/WS/modeldesignscale.xml).
+
 Súbor skompilujeme príkazom:
 ```
 .\PublishModel.bat
@@ -36,7 +37,8 @@ Program na vytváranie OPC UA _informačného modelu_ UA Modeler je možné stia
 Po spustení programu _UA Modeler_ je treba otvoriť projekt **weightscalenodeset.tt2pro**. Uzly obsahúce objektové typy DI informačného modelu sú v adresáry Types>ObjectTypes>TopologyElementType. Všetky uzly DI IM sú popísané v špecifikácii [Part 100: Device Information Model](https://opcfoundation.org/developer-tools/specifications-unified-architecture/part-100-device-information-model/). 
 
 Projekt obsahuje aj informačný model pre zariadenie váha:
-![Screenshot](UAModeler-weightScale.PNG)
+
+ ![Screenshot](UAModeler-weightScale.PNG)
 
 ## Vytvorenie OPC UA serveru s IM weightScale
 Ako prvé je potrebné vytvoriť kópiu OPC UA serveru podľa [návodu](http://opcfoundation.github.io/UA-.NETStandard/help/server_development.htm). **Ale** v našom prípade miesto _Reference Server_ použijeme _Boiler Server_.
