@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Published",
+    "\\Published\\master",
+    "\\Published\\master\\DI",
+    "\\Published\\master\\WS"
   ],
-  "SelectedNode": "\\PublishModel.bat",
+  "SelectedNode": "\\README.md",
   "PreviewInSolutionExplorer": false
 }

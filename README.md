@@ -38,3 +38,6 @@ Po spustení programu _UA Modeler_ je treba otvoriť projekt **weightscalenodese
 Projekt obsahuje aj informačný model pre zariadenie váha:
 ![Screenshot](UAModeler-weightScale.PNG)
 
+## Vytvorenie OPC UA serveru s IM weightScale
+Ako prvé je potrebné vytvoriť kópiu OPC UA serveru podľa [návodu](http://opcfoundation.github.io/UA-.NETStandard/help/server_development.htm). **Ale** v našom prípade miesto _Reference Server_ použijeme _Boiler Server_.
+
