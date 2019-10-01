@@ -7,19 +7,15 @@ Predpokladá sa prostredie Windows 7 a vyššie.
 
 ## Vytvorenie lokálnej kópie projektu 
 Ako prvé je potrebné nainštalovať [git](https://www.develves.net/blogs/asd/articles/using-git-with-powershell-on-windows-10/) do počítača a stiahnuť si dáta z úložiska git. 
-Vytvoríme nový adresár c:\informationmodel a vytvoríme klon projektu git [UA ModelCompiler](https://github.com/STUBA-rupr/UA-ModelCompiler) cez prostredie _powershell_:
+Vytvoríme nový adresár c:\informationmodel a vytvoríme klon projektu git [UA ModelCompiler](https://github.com/OPCFoundation/UA-ModelCompiler.git) a [DI-InformationModel
+](https://github.com/STUBA-rupr/DI-InformationModel.git) cez prostredie _powershell_:
 ```
 PS C:\> mkdir informationmodel
 PS C:\> cd .\informationmodel\
-PS C:\informationmodel> git clone https://github.com/STUBA-rupr/UA-ModelCompiler --recursive
+PS C:\informationmodel> git clone https://github.com/OPCFoundation/UA-ModelCompiler.git --recursive
+PS C:\informationmodel> git clone https://github.com/STUBA-rupr/DI-InformationModel.git
 ```
-Projekt riešenie UA-ModelCompiler odporúčam skompilovať v MS Visual Studiu 2017 Community.
-Vytvoríme adresár **scaledevicemodel** a skopírujeme potrebné súbory.
-
-```
-mkdir scaledevicemodel
-cp .\UA-ModelCompiler\Published\ADI\OpcUaAdiModel.xml .\scaledevicemodel\
-```
+Projekt riešenie _UA-ModelCompiler_ je potrebné skompilovať, odporúčam MS Visual Studiu 2017 Community.
 
 ## Vytvorenie vlastného informačného modelu založeného na DI
 Návrh informačného modelu váhy založeného na špecifikácii DI: 
