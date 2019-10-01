@@ -49,7 +49,7 @@ Ako prvé je potrebné vytvoriť kópiu OPC UA serveru podľa [návodu](http://o
 ```
 PS C:\informationmodel> git clone https://github.com/STUBA-rupr/UA-.NETStandard.git
 ```
-Popis zmien  
+Popis zmien sa dá nájsť v [readme-SK.md](https://github.com/STUBA-rupr/UA-.NETStandard/blob/master/SampleApplications/Workshop/Boiler/WeightScaleServer/readme-SK.md#weightscaleserver) súbore. 
 
 
 
