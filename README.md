@@ -23,9 +23,17 @@ Návrh informačného modelu váhy založeného na špecifikácii DI:
 
 Kód ktorý popisuje daný model by mohol vyzerať nasledovne: [modeldesignscale.xml](Published/master/WS/modeldesignscale.xml).
 
-Súbor skompilujeme príkazom:
+Súbor skompilujeme spustením dávkového súboru:
 ```
-.\PublishModel.bat
+PS C:\informationmodel> cd .\DI-InformationModel\
+PS C:\informationmodel\DI-InformationModel> .\PublishModel.bat
+Building Model WS
+..\UA-ModelCompiler\Bin\debug\Opc.Ua.ModelCompiler.exe   -d2 "Design\modeldesignscale.xml" -cg "Design\modeldesignscale.csv" -o2 "Published\master\WS\"
+Trying file: C:\informationmodel\DI-InformationModel\Design\OpcUaDiModel.xml
+Trying file: C:\informationmodel\DI-InformationModel\Design\OpcUaDiModel.csv
+Copying Model files to Published\master\WS\modeldesignscale
+        1 file(s) copied.
+        1 file(s) copied.
 ```
 
 ## Preskúmanie informačného modelu _Device Information Model_
