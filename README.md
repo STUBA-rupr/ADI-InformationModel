@@ -23,6 +23,45 @@ Návrh objektového typu váhy (WeightScaleType) založeného na špecifikácii 
 
 Kód ktorý popisuje daný model by mohol vyzerať nasledovne: [modeldesignscale.xml](Published/master/WS/modeldesignscale.xml).
 
+### Definícia menného priestoru
+Súbor popisujúci informačný model obsahuje hlavičku v ktorej sú zadefinované menné priestory jazyka XML a OPC UA:
+```
+xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:OpcUa="http://opcfoundation.org/UA/"
+xmlns:DI="http://opcfoundation.org/UA/DI/"
+xmlns:WS="http://phi-ware.com/FEISTU/WS/"
+```
+Kde
+- **uax** je menný priestor základných dátových typov OPC UA
+- **xsi** je menný priestor jadra XML
+- **OpcUa** je menný priestor základnych objektov OPC UA
+- **DI** je menný priestor objektov Device Information Model
+- **WS** je menný priestor objektov Weight Scale Information Model
+
+**_Poznámka: Názvy menných priestorov rozpoznávaju veľké a malé písmená._**
+
+
+
+
+### Objektový typ WeightScaleType
+Definícia objektového typu má nasledovnú syntax:
+<ObjectType SymbolicName="WS:WeightScaleType" BaseType="DI:DeviceType" IsAbstract="false" SupportsEvents="true">
+
+### Inštancia objektového typu WeightScaleType
+Súbor [modeldesignscale.xml](Published/master/WS/modeldesignscale.xml) obsahuje v sekcii <!-- Object instances --> definíciu inštancie objektového typu WeightScaleType:
+```
+<Object SymbolicName="WS:WeightScale01" TypeDefinition="WS:WeightScaleType">
+  <Description>Weight scale number 01</Description>
+  <References>
+    <Reference IsInverse="true">
+      <ReferenceType>OpcUa:Organizes</ReferenceType>
+      <TargetId>DI:DeviceSet</TargetId>
+    </Reference>
+  </References>
+</Object>
+```
+
 Súbor skompilujeme spustením dávkového súboru:
 ```
 PS C:\informationmodel> cd .\DI-InformationModel\
@@ -44,23 +83,7 @@ Projekt obsahuje aj informačný model pre zariadenie váha:
 
  ![Screenshot](UAModeler-weightScale.PNG)
 
-### Objektový typ WeightScaleType
-Definícia objektového typu má nasledovnú syntax:
-<ObjectType SymbolicName="WS:WeightScaleType" BaseType="DI:DeviceType" IsAbstract="false" SupportsEvents="true">
 
-### Inštancia objektového typu WeightScaleType
-Súbor [modeldesignscale.xml](Published/master/WS/modeldesignscale.xml) obsahuje v sekcii <!-- Object instances --> definíciu inštancie objektového typu WeightScaleType:
-```
-<Object SymbolicName="WS:WeightScale01" TypeDefinition="WS:WeightScaleType">
-  <Description>Weight scale number 01</Description>
-  <References>
-    <Reference IsInverse="true">
-      <ReferenceType>OpcUa:Organizes</ReferenceType>
-      <TargetId>DI:DeviceSet</TargetId>
-    </Reference>
-  </References>
-</Object>
-```
 
 
 ## Vytvorenie OPC UA serveru s IM weightScale
