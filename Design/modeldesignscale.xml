@@ -94,7 +94,6 @@ SOFTWARE.
         </Children>
       </Variable>
     </Children>
-    
     <References>
       <Reference IsInverse="true">
         <ReferenceType>OpcUa:Organizes</ReferenceType>
