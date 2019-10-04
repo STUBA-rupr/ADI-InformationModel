@@ -75,25 +75,11 @@ SOFTWARE.
           </Method>
         </Children>
       </Object>
-      
     </Children>
   </ObjectType>  
   <!-- Object instances -->
   <Object SymbolicName="WS:WeightScale01" TypeDefinition="WS:WeightScaleType">
     <Description>Weight scale number 01</Description>
-    <Children>
-      <Variable SymbolicName="WS:weightScale" TypeDefinition="OpcUa:AnalogItemType" DataType="OpcUa:Double" ModellingRule="Mandatory">
-        <BrowseName>weightScale</BrowseName>
-        <Description>Actual weight.</Description>
-        <Children>
-          <Property SymbolicName="OpcUa:EngineeringUnits" ModellingRule="Mandatory" DataType="OpcUa:EUInformation" >
-            <UnitId>
-              <uax:int>23130</uax:int>
-            </UnitId>
-          </Property>
-        </Children>
-      </Variable>
-    </Children>
     <References>
       <Reference IsInverse="true">
         <ReferenceType>OpcUa:Organizes</ReferenceType>

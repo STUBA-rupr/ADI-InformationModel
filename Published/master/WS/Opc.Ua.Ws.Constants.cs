@@ -465,21 +465,6 @@ namespace Opc.Ua.Ws
         /// The identifier for the WeightScale01_ParameterSet_weightScale_EngineeringUnits Variable.
         /// </summary>
         public const uint WeightScale01_ParameterSet_weightScale_EngineeringUnits = 15076;
-
-        /// <summary>
-        /// The identifier for the WeightScale01_weightScale Variable.
-        /// </summary>
-        public const uint WeightScale01_weightScale = 15079;
-
-        /// <summary>
-        /// The identifier for the WeightScale01_weightScale_EURange Variable.
-        /// </summary>
-        public const uint WeightScale01_weightScale_EURange = 15083;
-
-        /// <summary>
-        /// The identifier for the WeightScale01_weightScale_EngineeringUnits Variable.
-        /// </summary>
-        public const uint WeightScale01_weightScale_EngineeringUnits = 15084;
     }
     #endregion
 
@@ -910,21 +895,6 @@ namespace Opc.Ua.Ws
         /// The identifier for the WeightScale01_ParameterSet_weightScale_EngineeringUnits Variable.
         /// </summary>
         public static readonly ExpandedNodeId WeightScale01_ParameterSet_weightScale_EngineeringUnits = new ExpandedNodeId(Opc.Ua.Ws.Variables.WeightScale01_ParameterSet_weightScale_EngineeringUnits, Opc.Ua.Ws.Namespaces.OpcUaWs);
-
-        /// <summary>
-        /// The identifier for the WeightScale01_weightScale Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId WeightScale01_weightScale = new ExpandedNodeId(Opc.Ua.Ws.Variables.WeightScale01_weightScale, Opc.Ua.Ws.Namespaces.OpcUaWs);
-
-        /// <summary>
-        /// The identifier for the WeightScale01_weightScale_EURange Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId WeightScale01_weightScale_EURange = new ExpandedNodeId(Opc.Ua.Ws.Variables.WeightScale01_weightScale_EURange, Opc.Ua.Ws.Namespaces.OpcUaWs);
-
-        /// <summary>
-        /// The identifier for the WeightScale01_weightScale_EngineeringUnits Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId WeightScale01_weightScale_EngineeringUnits = new ExpandedNodeId(Opc.Ua.Ws.Variables.WeightScale01_weightScale_EngineeringUnits, Opc.Ua.Ws.Namespaces.OpcUaWs);
     }
     #endregion
 
@@ -944,11 +914,6 @@ namespace Opc.Ua.Ws
         /// The BrowseName for the ParameterSet component.
         /// </summary>
         public const string ParameterSet = "ParameterSet";
-
-        /// <summary>
-        /// The BrowseName for the weightScale component.
-        /// </summary>
-        public const string weightScale = "weightScale";
 
         /// <summary>
         /// The BrowseName for the WeightScale01 component.
