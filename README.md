@@ -111,7 +111,7 @@ Tento kód definuje _kontajnéry_ kde sú vymenované premenné `Variable` a met
 Ako je vidieť pribudla definícia _premennej_ `WS:weightScale` a _metód_ `WS:Tare` a `WS:Zero`. Dôležité je tiež poznamenať, že `ModellingRule` sa zmenilo na **Mandatory**, čo značí že uzly (objekty, premenné, motódy) sú **povinné** pre objekty odvodené od **WeightScaleType**. Inými slovami, všetky objekty odvodené od **WeightScaleType** budú obsahovať `WS:weightScale`, `WS:Tare` a `WS:Zero`.      
 
 ### Inštancia objektového typu WeightScaleType
-Súbor [modeldesignscale.xml](Published/master/WS/modeldesignscale.xml) obsahuje v sekcii <!-- Object instances --> definíciu inštancie objektového typu WeightScaleType:
+Súbor [modeldesignscale.xml](Published/master/WS/modeldesignscale.xml) obsahuje v sekcii `<!-- Object instances -->` definíciu inštancie objektového typu WeightScaleType:
 ```
 <Object SymbolicName="WS:WeightScale01" TypeDefinition="WS:WeightScaleType">
   <Description>Weight scale number 01</Description>
@@ -125,7 +125,7 @@ Súbor [modeldesignscale.xml](Published/master/WS/modeldesignscale.xml) obsahuje
 ```
 Inštancia objektu sa vytvára cez kľúčové slovo `Object`. Podobne ako pri definícii objektového typu názov objektu obsahuje menný priestor. Uzol `<References>` obsahuje zoznam _referencií_. V tomto prípade ide o referenciu pomocou ktorej je možné objekt usporiadať do požadovanej hierarchie - zaradenie do adresáru **DeviceSet**.  
 
-Súbor skompilujeme spustením dávkového súboru:
+Súbor **modeldesignscale.xml** skompilujeme spustením dávkového súboru:
 ```
 PS C:\informationmodel> cd .\DI-InformationModel\
 PS C:\informationmodel\DI-InformationModel> .\PublishModel.bat
@@ -146,15 +146,13 @@ Projekt obsahuje aj informačný model pre zariadenie váha:
 
  ![Screenshot](UAModeler-weightScale.PNG)
 
-
-
-
 ## Vytvorenie OPC UA serveru s IM weightScale
 Ako prvé je potrebné vytvoriť kópiu OPC UA serveru podľa [návodu](http://opcfoundation.github.io/UA-.NETStandard/help/server_development.htm). **Ale** v našom prípade miesto _Reference Server_ použijeme _Boiler Server_. Upravený projekt je možné stiahnuť z git do nášho koreňového adresára:
 ```
 PS C:\informationmodel> git clone https://github.com/STUBA-rupr/UA-.NETStandard.git
 ```
-Popis zmien sa dá nájsť v [readme-SK.md](https://github.com/STUBA-rupr/UA-.NETStandard/blob/master/SampleApplications/Workshop/Boiler/WeightScaleServer/readme-SK.md#weightscaleserver) súbore. 
+Popis zmien zdrojového kódu, spustenie servera ako aj preskúmanie objektov servera sa dá nájsť v [readme-SK.md](https://github.com/STUBA-rupr/UA-.NETStandard/blob/master/SampleApplications/Workshop/Boiler/WeightScaleServer/readme-SK.md#weightscaleserver) súbore.
+
 
 
 
