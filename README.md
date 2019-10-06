@@ -152,6 +152,9 @@ Ako prvé je potrebné vytvoriť kópiu OPC UA serveru podľa [návodu](http://o
 PS C:\informationmodel> git clone https://github.com/STUBA-rupr/UA-.NETStandard.git
 ```
 Popis zmien zdrojového kódu, spustenie servera ako aj preskúmanie objektov servera sa dá nájsť v [readme-SK.md](https://github.com/STUBA-rupr/UA-.NETStandard/blob/master/SampleApplications/Workshop/Boiler/WeightScaleServer/readme-SK.md#weightscaleserver) súbore.
+Adresný priestor OPC UA serveru pre váhu:
+![weightScale01.PNG](weightScale01.PNG)
+Ďalším krokom je vytvorenie obslužného kódu pre metódy _Zero_, _Tare_ a aktualizáciu premennej _weightScale_.
 
 
 
