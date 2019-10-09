@@ -153,8 +153,10 @@ PS C:\informationmodel> git clone https://github.com/STUBA-rupr/UA-.NETStandard.
 ```
 Popis zmien zdrojového kódu, spustenie servera ako aj preskúmanie objektov servera sa dá nájsť v [readme-SK.md](https://github.com/STUBA-rupr/UA-.NETStandard/blob/master/SampleApplications/Workshop/Boiler/WeightScaleServer/readme-SK.md#weightscaleserver) súbore.
 Adresný priestor OPC UA serveru pre váhu:
+
 ![weightScale01.PNG](weightScale01.PNG)
-Ďalším krokom je vytvorenie obslužného kódu pre metódy _Zero_, _Tare_ a aktualizáciu premennej _weightScale_.
+
+Ďalším krokom je vytvorenie obslužného kódu pre metódy _Zero_, _Tare_ a aktualizáciu premennej _weightScale_. Príklad ako by kód mohol vyzerať je [tu](https://github.com/STUBA-rupr/UA-.NETStandard/blob/master/SampleApplications/Workshop/Boiler/WeightScaleServer/readme-SK.md#vytvorenie-obslu%C5%BEn%C3%A9ho-k%C3%B3du-pre-met%C3%B3dy-tare-a-zero-adresn%C3%A9ho-priestoru-weightscale).
 
 
 
