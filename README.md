@@ -23,7 +23,7 @@ Návrh objektového typu váhy (WeightScaleType) založeného na špecifikácii 
 
 Kód ktorý popisuje daný model by mohol vyzerať nasledovne: [modeldesignscale.xml](Published/master/WS/modeldesignscale.xml).
 
-### 3. Definícia menného priestoru
+### 2.1 Definícia menného priestoru
 Súbor popisujúci informačný model obsahuje hlavičku v ktorej sú zadefinované menné priestory jazyka XML a OPC UA:
 ```
 xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd"
@@ -41,7 +41,7 @@ Kde
 
 **_Poznámka: Názvy menných priestorov rozpoznávaju veľké a malé písmená._**
 
-### 4. Objektový typ WeightScaleType
+### 2.2 Objektový typ WeightScaleType
 Definícia objektového typu má nasledovnú syntax:
 ```
 <ObjectType SymbolicName="WS:WeightScaleType" BaseType="DI:DeviceType" IsAbstract="false" SupportsEvents="true">
@@ -110,7 +110,7 @@ Tento kód definuje _kontajnéry_ kde sú vymenované premenné `Variable` a met
 ```
 Ako je vidieť pribudla definícia _premennej_ `WS:weightScale` a _metód_ `WS:Tare` a `WS:Zero`. Dôležité je tiež poznamenať, že `ModellingRule` sa zmenilo na **Mandatory**, čo značí že uzly (objekty, premenné, motódy) sú **povinné** pre objekty odvodené od **WeightScaleType**. Inými slovami, všetky objekty odvodené od **WeightScaleType** budú obsahovať `WS:weightScale`, `WS:Tare` a `WS:Zero`.      
 
-### 5. Inštancia objektového typu WeightScaleType
+### 2.3 Inštancia objektového typu WeightScaleType
 Súbor [modeldesignscale.xml](Published/master/WS/modeldesignscale.xml) obsahuje v sekcii `<!-- Object instances -->` definíciu inštancie objektového typu WeightScaleType:
 ```
 <Object SymbolicName="WS:WeightScale01" TypeDefinition="WS:WeightScaleType">
@@ -138,7 +138,7 @@ Copying Model files to Published\master\WS\modeldesignscale
         1 file(s) copied.
 ```
 
-## 6. Preskúmanie informačného modelu _Device Information Model_
+## 3. Preskúmanie informačného modelu _Device Information Model_
 Program na vytváranie OPC UA _informačného modelu_ UA Modeler je možné stiahnuť na stránke: [Unified-Automation](https://www.unified-automation.com/products/development-tools/uamodeler.html).
 Po spustení programu _UA Modeler_ je treba otvoriť projekt [weightscalenodeset.tt2pro](Published/master/WS/weightscalenodeset.tt2pro). Uzly obsahúce objektové typy DI informačného modelu sú v adresáry Types>ObjectTypes>TopologyElementType. Všetky uzly DI IM sú popísané v špecifikácii [Part 100: Device Information Model](https://opcfoundation.org/developer-tools/specifications-unified-architecture/part-100-device-information-model/). 
 
@@ -146,7 +146,7 @@ Projekt obsahuje aj informačný model pre zariadenie váha:
 
  ![Screenshot](UAModeler-weightScale.PNG)
 
-## 7. Vytvorenie OPC UA serveru s IM weightScale
+## 4. Vytvorenie OPC UA serveru s IM weightScale
 Ako prvé je potrebné vytvoriť kópiu OPC UA serveru podľa [návodu](http://opcfoundation.github.io/UA-.NETStandard/help/server_development.htm). **Ale** v našom prípade miesto _Reference Server_ použijeme _Boiler Server_. Upravený projekt je možné stiahnuť z git do nášho koreňového adresára:
 ```
 PS C:\informationmodel> git clone https://github.com/STUBA-rupr/UA-.NETStandard.git
