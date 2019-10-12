@@ -24,7 +24,8 @@ Návrh objektového typu váhy (WeightScaleType) založeného na špecifikácii 
 Kód ktorý popisuje daný model by mohol vyzerať nasledovne: [modeldesignscale.xml](Published/master/WS/modeldesignscale.xml).
 
 ### 2.1 Definícia menného priestoru
-Súbor popisujúci informačný model obsahuje hlavičku v ktorej sú zadefinované menné priestory jazyka XML a OPC UA:
+Súbor popisujúci informačný model obsahuje hlavičku v ktorej sú zadefinované menné priestory jazyka XML a OPC UA.
+#### Menné priestory jazyka XML:
 ```
 xmlns:uax="http://opcfoundation.org/UA/2008/02/Types.xsd"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -35,11 +36,22 @@ xmlns:WS="http://phi-ware.com/FEISTU/WS/"
 Kde
 - **uax** je menný priestor základných dátových typov OPC UA
 - **xsi** je menný priestor jadra XML
-- **OpcUa** je menný priestor základnych objektov OPC UA
+- **OpcUa** je menný priestor základných objektov OPC UA
 - **DI** je menný priestor objektov Device Information Model
 - **WS** je menný priestor objektov Weight Scale Information Model
 
 **_Poznámka: Názvy menných priestorov rozpoznávaju veľké a malé písmená._**
+
+#### Menné priestory OPC UA:
+```
+<Namespaces>
+	<Namespace Name="OpcUaWs" Prefix="Opc.Ua.Ws" XmlNamespace="http://phi-ware.com/FEISTU/WS/Types.xsd" XmlPrefix="WS">http://phi-ware.com/FEISTU/WS/</Namespace>
+	<Namespace Name="OpcUaDi" Prefix="Opc.Ua.Di" XmlNamespace="http://opcfoundation.org/UA/DI/Types.xsd" XmlPrefix="DI" FilePath="OpcUaDiModel">http://opcfoundation.org/UA/DI/</Namespace>
+	<Namespace Name="OpcUa" Prefix="Opc.Ua" InternalPrefix="Opc.Ua.Server" XmlNamespace="http://opcfoundation.org/UA/2008/02/Types.xsd" XmlPrefix="OpcUa">http://opcfoundation.org/UA/</Namespace>
+</Namespaces>
+```
+Menné priestory XML a OPC UA sú spárované cez kľúčové slovo `XmlPrefix` v definícii OPC UA menného priestoru.
+
 
 ### 2.2 Objektový typ WeightScaleType
 Definícia objektového typu má nasledovnú syntax:
