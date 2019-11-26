@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Design"
+    "\\COMport",
+    "\\COMport\\COMport",
+    "\\Design",
+    "\\MettlerToledoSimulator"
   ],
-  "SelectedNode": "\\Design\\modeldesignscale.csv",
+  "SelectedNode": "\\COMport\\COMport\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

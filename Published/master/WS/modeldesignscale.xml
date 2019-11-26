@@ -45,18 +45,18 @@ SOFTWARE.
 
   <ObjectType SymbolicName="WS:WeightScaleType" BaseType="DI:DeviceType" IsAbstract="false" SupportsEvents="true">
     <Description>Base weight scale type.</Description>
-    <Children>
+    <Children>      
       <!-- Parameter set-->
       <Object SymbolicName="WS:ParameterSet" TypeDefinition="OpcUa:BaseObjectType" ModellingRule="Mandatory">
         <Description>Flat list of Parameters</Description>
         <Children>
-          <Variable SymbolicName="WS:weightScale" TypeDefinition="OpcUa:AnalogItemType" DataType="OpcUa:Double" ModellingRule="Mandatory">
+          <Variable SymbolicName="WS:weightScale" TypeDefinition="OpcUa:AnalogItemType" ValueRank="Scalar" AccessLevel="ReadWrite" DataType="OpcUa:Double" ModellingRule="Optional">
             <BrowseName>weightScale</BrowseName>
             <Description>Actual weight.</Description>
             <Children>
-              <Property SymbolicName="OpcUa:InstrumentRange" ModellingRule="Optional" DataType="OpcUa:Range" />
-              <Property SymbolicName="OpcUa:EURange" ModellingRule="Optional" DataType="OpcUa:Range" />
-              <Property SymbolicName="OpcUa:EngineeringUnits" ModellingRule="Mandatory" DataType="OpcUa:EUInformation" />
+              <Property SymbolicName="WS:InstrumentRange" ModellingRule="Optional" DataType="OpcUa:Range" />
+              <Property SymbolicName="WS:EURange" ModellingRule="Optional" DataType="OpcUa:Range" />
+              <Property SymbolicName="WS:EngineeringUnits" ModellingRule="Mandatory" DataType="OpcUa:EUInformation" />
             </Children>
           </Variable>
         </Children>
@@ -75,12 +75,156 @@ SOFTWARE.
           </Method>
         </Children>
       </Object>
-      
     </Children>
   </ObjectType>  
+  
+  <!-- Mettler Toledo PR83 -->
+  <ObjectType SymbolicName="WS:MettlerToledoPR802" BaseType="WS:WeightScaleType" IsAbstract="false" SupportsEvents="true">
+    <Description>Mettler Toledo PR83 type.</Description>
+    <Children>
+      <!-- DI standard Properties-->
+      <Property SymbolicName="DI:DeviceClass" DataType="OpcUa:String" ModellingRule="Mandatory">
+        <Description>Indicates in which domain or for what purpose a device is used.</Description>
+        <DefaultValue>
+          <uax:String>Static Scale</uax:String>
+        </DefaultValue>
+      </Property>
+      <Property SymbolicName="DI:SerialNumber" DataType="OpcUa:String"  ModellingRule="Mandatory">
+        <Description>Identifier that uniquely identifies, within a manufacturer, a device instance</Description>
+      </Property>      
+      <Property SymbolicName="DI:Manufacturer" DataType="OpcUa:LocalizedText"  ModellingRule="Mandatory">
+        <Description>Name of the company that manufactured the device</Description>
+        <DefaultValue>
+          <uax:LocalizedText>
+            <uax:Text>Mettler Toledo</uax:Text>
+          </uax:LocalizedText>
+        </DefaultValue>
+      </Property>
+      <Property SymbolicName="DI:Model" DataType="OpcUa:LocalizedText"  ModellingRule="Mandatory">
+        <Description>Model name of the device</Description>
+        <DefaultValue>
+          <uax:LocalizedText>
+            <uax:Text>PR 802</uax:Text>
+          </uax:LocalizedText>
+        </DefaultValue>
+      </Property>
+      <!-- Parameter set-->    
+      <Object SymbolicName="WS:ParameterSet" TypeDefinition="OpcUa:BaseObjectType" ModellingRule="Mandatory">
+        <Description>Flat list of Parameters</Description>
+        <Children>
+          <Variable SymbolicName="WS:COM_SerialPort_Status" TypeDefinition="OpcUa:PropertyType" ValueRank="Scalar" AccessLevel="ReadWrite" DataType="OpcUa:Integer" ModellingRule="Mandatory">
+            <BrowseName>COMConn_Status</BrowseName>
+            <Description>Serial port to scale status.</Description>
+          </Variable>
+          <Variable SymbolicName="WS:StaticScale_Filler_01.WV_STABLE" TypeDefinition="OpcUa:PropertyType" ValueRank="Scalar" AccessLevel="ReadWrite" DataType="OpcUa:String" ModellingRule="Mandatory">
+            <BrowseName>StaticScale_Filler_01.WV_STABLE</BrowseName>
+            <Description>StaticScale Filler 01 WV_STABLE</Description>          
+          </Variable>
+          <Variable SymbolicName="WS:StaticScale_Filler_01.WV" TypeDefinition="OpcUa:PropertyType" ValueRank="Scalar" AccessLevel="ReadWrite" DataType="OpcUa:String" ModellingRule="Mandatory">
+            <BrowseName>StaticScale_Filler_01.WV</BrowseName>
+            <Description>StaticScale Filler 01 WV</Description>
+          </Variable>
+          <Variable SymbolicName="WS:StaticScale_Filler_01.COMMAND_SI" TypeDefinition="OpcUa:PropertyType" ValueRank="Scalar" AccessLevel="ReadWrite" DataType="OpcUa:String" ModellingRule="Mandatory">
+            <BrowseName>StaticScale_Filler_01.COMMAND_SI</BrowseName>
+            <Description>StaticScale Filler 01 COMMAND_SI</Description>
+          </Variable>
+          <Variable SymbolicName="WS:StaticScale_Filler_02.WV_STABLE" TypeDefinition="OpcUa:PropertyType" ValueRank="Scalar" AccessLevel="ReadWrite" DataType="OpcUa:String" ModellingRule="Mandatory">
+            <BrowseName>StaticScale_Filler_02.WV_STABLE</BrowseName>
+            <Description>StaticScale Filler 02 WV_STABLE</Description>
+          </Variable>
+          <Variable SymbolicName="WS:StaticScale_Filler_02.WV" TypeDefinition="OpcUa:PropertyType" ValueRank="Scalar" AccessLevel="ReadWrite" DataType="OpcUa:String" ModellingRule="Mandatory">
+            <BrowseName>StaticScale_Filler_02.WV</BrowseName>
+            <Description>StaticScale Filler 02 WV</Description>
+          </Variable>
+          <Variable SymbolicName="WS:StaticScale_Filler_02.COMMAND_SI" TypeDefinition="OpcUa:PropertyType" ValueRank="Scalar" AccessLevel="ReadWrite" DataType="OpcUa:String" ModellingRule="Mandatory">
+            <BrowseName>StaticScale_Filler_02.COMMAND_SI</BrowseName>
+            <Description>StaticScale Filler 02 COMMAND_SI</Description>
+          </Variable>
+          <Variable SymbolicName="WS:StaticScale_Filler_03.WV_STABLE" TypeDefinition="OpcUa:PropertyType" ValueRank="Scalar" AccessLevel="ReadWrite" DataType="OpcUa:String" ModellingRule="Mandatory">
+            <BrowseName>StaticScale_Filler_03.WV_STABLE</BrowseName>
+            <Description>StaticScale Filler 03 WV_STABLE</Description>
+          </Variable>
+          <Variable SymbolicName="WS:StaticScale_Filler_03.WV" TypeDefinition="OpcUa:PropertyType" ValueRank="Scalar" AccessLevel="ReadWrite" DataType="OpcUa:String" ModellingRule="Mandatory">
+            <BrowseName>StaticScale_Filler_03.WV</BrowseName>
+            <Description>StaticScale Filler 03 WV</Description>
+          </Variable>
+          <Variable SymbolicName="WS:StaticScale_Filler_03.COMMAND_SI" TypeDefinition="OpcUa:PropertyType" ValueRank="Scalar" AccessLevel="ReadWrite" DataType="OpcUa:String" ModellingRule="Mandatory">
+            <BrowseName>StaticScale_Filler_03.COMMAND_SI</BrowseName>
+            <Description>StaticScale Filler 03 COMMAND_SI</Description>
+          </Variable>
+          <Variable SymbolicName="WS:SC_NetWeight" TypeDefinition="OpcUa:PropertyType" ValueRank="Scalar" AccessLevel="ReadWrite" DataType="OpcUa:Float" ModellingRule="Mandatory">
+            <BrowseName>SC_NetWeight</BrowseName>
+            <Description>Static Scale value from PLC.</Description>
+          </Variable>
+          <Variable SymbolicName="WS:SC_Status" TypeDefinition="OpcUa:PropertyType" ValueRank="Scalar" AccessLevel="ReadWrite" DataType="OpcUa:Integer" ModellingRule="Mandatory">
+            <BrowseName>SC_Status</BrowseName>
+            <Description>Static scale Handshaking signal status.</Description>
+          </Variable>
+          <Variable SymbolicName="WS:SC_StabilityIndicator" TypeDefinition="OpcUa:PropertyType" ValueRank="Scalar" AccessLevel="ReadWrite" DataType="OpcUa:Boolean" ModellingRule="Mandatory">
+            <BrowseName>SC_StabilityIndicator</BrowseName>
+            <Description>Static scale’s stability indicator from PLC.</Description>
+          </Variable>        
+        </Children>
+      </Object>
+      <!-- Methods -->
+      <Object SymbolicName="WS:MethodSet" TypeDefinition="OpcUa:BaseObjectType" ModellingRule="Mandatory">
+        <Description>Flat list of Methods</Description>
+        <Children>
+          <Method SymbolicName="WS:COM_Connect" ModellingRule="Mandatory">
+            <BrowseName>COM_Connect</BrowseName>
+            <Description>Connect to scale.</Description>
+            <InputArguments>
+              <Argument Name="portName" DataType="OpcUa:String" ValueRank="Scalar" />
+              <Argument Name="baudRate" DataType="OpcUa:Integer" ValueRank="Scalar" />
+              <Argument Name="parity" DataType="OpcUa:Integer" ValueRank="Scalar" />
+              <Argument Name="stopBit" DataType="OpcUa:Integer" ValueRank="Scalar" />
+            </InputArguments>
+            <OutputArguments>
+              <Argument Name="errno" DataType="OpcUa:Integer" ValueRank="Scalar" />
+            </OutputArguments>
+          </Method>
+          
+          <Method SymbolicName="WS:COM_IsConnected" ModellingRule="Mandatory">
+            <BrowseName>COM_IsConnected</BrowseName>
+            <Description>Check if scale is connected.</Description>            
+            <OutputArguments>
+              <Argument Name="status" DataType="OpcUa:Integer" ValueRank="Scalar" />
+            </OutputArguments>
+          </Method>
+
+          <Method SymbolicName="WS:COM_SendMTSICSCommand" ModellingRule="Mandatory">
+            <BrowseName>COM_SendMTSICSCommand</BrowseName>
+            <Description>Send MT SICS Command.</Description>
+            <InputArguments>
+              <Argument Name="command" DataType="OpcUa:String" ValueRank="Scalar" />
+            </InputArguments>              
+            <OutputArguments>
+              <Argument Name="response" DataType="OpcUa:String" ValueRank="Scalar" />
+            </OutputArguments>
+          </Method>
+          
+          <Method SymbolicName="WS:COM_Disconect" ModellingRule="Mandatory">
+            <BrowseName>COM_Disconect</BrowseName>
+            <Description>Disconnect from scale.</Description>
+            <OutputArguments>
+              <Argument Name="errno" DataType="OpcUa:Integer" ValueRank="Scalar" />
+            </OutputArguments>
+          </Method>          
+        </Children>
+      </Object>
+    </Children>
+  </ObjectType>    
   <!-- Object instances -->
-  <Object SymbolicName="WS:WeightScale01" TypeDefinition="WS:WeightScaleType">
-    <Description>Weight scale number 01</Description>
+  <Object SymbolicName="WS:PR802_BV020" TypeDefinition="WS:MettlerToledoPR802">
+    <Description>Elektronicka Vaha PR802</Description>
+    <Children>
+      <Property SymbolicName="DI:SerialNumber" DataType="OpcUa:String"  ModellingRule="Mandatory">
+        <Description>Identifier that uniquely identifies, within a manufacturer, a device instance</Description>
+        <DefaultValue>
+          <uax:String>1118020203</uax:String>
+        </DefaultValue>
+      </Property>
+    </Children>
     <References>
       <Reference IsInverse="true">
         <ReferenceType>OpcUa:Organizes</ReferenceType>
