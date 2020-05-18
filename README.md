@@ -1,6 +1,6 @@
 # DI-InformationModel
 Tento projekt je venovaný:
-- vytvorenie lokálnej kópie projektu 
+- vytvoreniu lokálnej kópie projektu 
 - preskúmaniu informačného modelu  _informačného modelu_(IM) založeného na _Device Information Model(DI)_ .
 - vytvoreniu vlastného IM.
 Predpokladá sa prostredie Windows 7 a vyššie.
